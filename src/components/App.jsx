@@ -20,7 +20,7 @@ class App extends Component {
   };
   onChangeFilterValue = event => {
     const filterValue = event.target.value;
-    console.log('filterValue', filterValue);
+    // console.log('filterValue', filterValue);
 
     this.setState({
       filter: event.target.value,
@@ -29,8 +29,8 @@ class App extends Component {
   compareContacts = () => {
     const { filter, contacts } = this.state;
     const normalizeFilter = filter.toLowerCase().trim();
-    console.log('normalizeFilter: ', normalizeFilter);
-    console.log(contacts);
+    // console.log('normalizeFilter: ', normalizeFilter);
+    // console.log(contacts);
     return contacts.filter(contact => {
       return contact.name.toLowerCase().includes(normalizeFilter);
     });
@@ -60,7 +60,7 @@ class App extends Component {
     // this.state.contacts.find()
   };
   render() {
-    console.log('contacts', this.state.contacts);
+    // console.log('contacts', this.state.contacts);
     return (
       <div className={s.wrap}>
         <SectionTitle title="Phonebook">
