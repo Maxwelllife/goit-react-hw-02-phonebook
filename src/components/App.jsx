@@ -19,7 +19,7 @@ class App extends Component {
     filter: '',
   };
   onChangeFilterValue = event => {
-    const filterValue = event.target.value;
+    // const filterValue = event.target.value;
     // console.log('filterValue', filterValue);
 
     this.setState({
