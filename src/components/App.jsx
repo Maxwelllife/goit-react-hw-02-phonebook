@@ -1,10 +1,11 @@
 import 'modern-normalize/modern-normalize.css';
 import { Component } from 'react';
 import SectionTitle from './Section/SectionTitle';
-// import Notification from './Notification/Notification';
 import ContactsForm from './ContactsForm/ContactsForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import s from './app.module.css';
+
 import { nanoid } from 'nanoid';
 
 class App extends Component {
@@ -61,16 +62,7 @@ class App extends Component {
   render() {
     console.log('contacts', this.state.contacts);
     return (
-      <div
-        style={{
-          height: '100vh',
-          // display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101',
-        }}
-      >
+      <div className={s.wrap}>
         <SectionTitle title="Phonebook">
           {/* в инфо приходит наш стейт с формы после сабмита и записываеться в параметр дата */}
           <ContactsForm catchSubmitInfo={this.addContact} />
